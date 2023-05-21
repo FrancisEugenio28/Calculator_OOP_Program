@@ -14,6 +14,14 @@ root.configure(background='black')
 
 class GUI_calculator:
     def GUI(self):
+        #create function for each number button
+        def get_digit(digit):
+            current = Num_Input['text']
+            new = current + str(digit)
+            Num_Input.config(text=new)
+        #create a function for the clear button
+        #create a function for each operation
+        # Perform operation within the = button
     #create a space where the calculation takes place or the screen of a calculator
         Num_Input = Label(root, text='', bg='black', fg='white')
         Num_Input.grid(row=0, column=0, pady=(50,25), columnspan=5, sticky='w')
@@ -84,11 +92,4 @@ class GUI_calculator:
         button_divide.config(font=('verdana', 14, 'bold'))
         root.mainloop()
 
-        #create function for each number button
-        def get_digit(digit):
-            current = Num_Input['text']
-            new = current + str(digit)
-            Num_Input.config(text=new)
-        #create a function for the clear button
-        #create a function for each operation
-        # Perform operation within the = button
+        
