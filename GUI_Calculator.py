@@ -20,6 +20,8 @@ class GUI_calculator:
             new = current + str(digit)
             Num_Input.config(text=new)
         #create a function for the clear button
+        def clear():
+            Num_Input.config(text='')
         #create a function for each operation
         # Perform operation within the = button
     #create a space where the calculation takes place or the screen of a calculator
@@ -75,7 +77,7 @@ class GUI_calculator:
         button_multiply.grid(row=3, column=3)
         button_multiply.config(font=('verdana', 14, 'bold'))
         #create a functioning button for clear
-        button_clear = Button(root, text='C', bg='white', fg='grey', width=5, height=2)
+        button_clear = Button(root, text='C', bg='white', fg='grey', width=5, height=2, command=lambda :clear())
         button_clear.grid(row=4, column=0)
         button_clear.config(font=('verdana', 14, 'bold'))
         #create a functioning button for 0
