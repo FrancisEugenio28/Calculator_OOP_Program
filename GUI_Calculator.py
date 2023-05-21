@@ -11,12 +11,14 @@ root.title('Simple Calculator')
 root.geometry('300x380')
 root.resizable(0,0)
 root.configure(background='black')
-root.mainloop()
 #create a space where the calculation takes place or the screen of a calculator
 Num_Input = Label(root, text='', bg='black', fg='white')
 Num_Input.grid(row=0, column=0, pady=(50,25), columnspan=5, sticky='w')
 Num_Input.config(font=('verdana',30, 'bold'))
 #create a functioning button for 7
+button7 = Button(root, text='7', bg='white', fg='grey', width=5, height=2)
+button7.grid(row=1, column=0)
+button7.config(font=('verdana', 14, 'bold'))
 #create a functioning button for 8
 #create a functioning button for 9
 #create a functioning button for +
@@ -32,4 +34,5 @@ Num_Input.config(font=('verdana',30, 'bold'))
 #create a functioning button for 0
 #create a functioning button for =
 #create a functioning button for /
+root.mainloop()
 
