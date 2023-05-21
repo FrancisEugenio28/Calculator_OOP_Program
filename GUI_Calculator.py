@@ -22,6 +22,4 @@
 #create a functioning button for 0
 #create a functioning button for =
 #create a functioning button for /
-#create function for each number button
-#create a function for the clear button
-#create a function for each operation
+
