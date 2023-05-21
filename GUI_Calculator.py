@@ -4,7 +4,14 @@
 
 #Psuedocode
 #import tkinter
+from tkinter import *
 #create GUI
+root = Tk()
+root.title('Simple Calculator')
+root.geometry('300x380')
+root.resizable(0,0)
+root.configure(background='black')
+root.mainloop()
 #create a space where the calculation takes place or the screen of a calculator
 #create a functioning button for 7
 #create a functioning button for 8
