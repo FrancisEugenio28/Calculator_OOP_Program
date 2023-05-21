@@ -5,7 +5,7 @@
 from GUI_Calculator import GUI_calculator
 
 calc = GUI_calculator()
-calc.
+calc.GUI()
 #pseudocode
 #create function for each number button
 #create a function for the clear button
