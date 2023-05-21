@@ -13,16 +13,13 @@ root.resizable(0,0)
 root.configure(background='black')
 
 class GUI_calculator:
-    def Num_Input(self):
+    def GUI(self):
     #create a space where the calculation takes place or the screen of a calculator
         Num_Input = Label(root, text='', bg='black', fg='white')
         Num_Input.grid(row=0, column=0, pady=(50,25), columnspan=5, sticky='w')
         Num_Input.config(font=('verdana',30, 'bold'))
-    def Buttons(self):
-        input_num = GUI_calculator()
-        input_num.Num_Input()
         #create a functioning button for 7
-        button7 = Button(root, text='7', bg='white', fg='grey', width=5, height=2, command=lambda :input_num.Num_Input()(7))
+        button7 = Button(root, text='7', bg='white', fg='grey', width=5, height=2, command=lambda :get_digit(7))
         button7.grid(row=1, column=0)
         button7.config(font=('verdana', 14, 'bold'))
         #create a functioning button for 8
@@ -87,3 +84,11 @@ class GUI_calculator:
         button_divide.config(font=('verdana', 14, 'bold'))
         root.mainloop()
 
+        #create function for each number button
+        def get_digit(digit):
+            current = Num_Input['text']
+            new = current + str(digit)
+            Num_Input.config(text=new)
+        #create a function for the clear button
+        #create a function for each operation
+        # Perform operation within the = button
