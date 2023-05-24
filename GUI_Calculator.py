@@ -32,6 +32,29 @@ class GUI_calculator:
             operator = op
             Num_Input.config(text='')
         # Perform operation within the = button
+        def get_answer():
+            try: 
+                global frst_num, scnd_num, operator
+                        
+                scnd_num = Num_Input['text']
+
+                if operator == '+':
+                    Num_Input.config(text=int(float(frst_num) + float(scnd_num)))
+                elif operator == '-':
+                    Num_Input.config(text=int(float(frst_num) - float(scnd_num)))
+                elif operator == '*':
+                    Num_Input.config(text=int(float(frst_num) * float(scnd_num)))
+                else:
+                    if scnd_num == 0:
+                        Num_Input.config(text='Syntax Error')
+                    else:
+                        Num_Input.config(text=str(round(float(frst_num) / float(scnd_num), 2)))
+
+            finally: 
+                print("Ending the Program...")
+                import time
+                time.sleep (1)
+                print("Thank you for using my simple calculator Program")
     #create a space where the calculation takes place or the screen of a calculator
         Num_Input = Label(root, text='', bg='black', fg='white')
         Num_Input.grid(row=0, column=0, pady=(50,25), columnspan=5, sticky='w')
