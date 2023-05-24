@@ -49,7 +49,7 @@ class GUI_calculator:
         button9.grid(row=1, column=2)
         button9.config(font=('verdana', 14, 'bold'))
         #create a functioning button for +
-        button_plus = Button(root, text='+', bg='white', fg='grey', width=5, height=2)
+        button_plus = Button(root, text='+', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation('+'))
         button_plus.grid(row=1, column=3)
         button_plus.config(font=('verdana', 14, 'bold'))
         #create a functioning button for 4
@@ -65,7 +65,7 @@ class GUI_calculator:
         button6.grid(row=2, column=2)
         button6.config(font=('verdana', 14, 'bold'))
         #create a functioning button for -
-        button_minus = Button(root, text='-', bg='white', fg='grey', width=5, height=2)
+        button_minus = Button(root, text='-', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation('-'))
         button_minus.grid(row=2, column=3)
         button_minus.config(font=('verdana', 14, 'bold'))
         #create a functioning button for 1
@@ -81,7 +81,7 @@ class GUI_calculator:
         button3.grid(row=3, column=2)
         button3.config(font=('verdana', 14, 'bold'))
         #create a functioning button for *
-        button_multiply = Button(root, text='*', bg='white', fg='grey', width=5, height=2)
+        button_multiply = Button(root, text='*', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation('*'))
         button_multiply.grid(row=3, column=3)
         button_multiply.config(font=('verdana', 14, 'bold'))
         #create a functioning button for clear
@@ -97,7 +97,7 @@ class GUI_calculator:
         button_equal.grid(row=4, column=2)
         button_equal.config(font=('verdana', 14, 'bold'))
         #create a functioning button for /
-        button_divide = Button(root, text='/', bg='white', fg='grey', width=5, height=2)
+        button_divide = Button(root, text='/', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation('/'))
         button_divide.grid(row=4, column=3)
         button_divide.config(font=('verdana', 14, 'bold'))
         root.mainloop()
