@@ -12,6 +12,8 @@ root.geometry('300x380')
 root.resizable(0,0)
 root.configure(background='black')
 
+frst_num= scnd_num= operator= None
+
 class GUI_calculator:
     def GUI(self):
         #create function for each number button
@@ -23,6 +25,12 @@ class GUI_calculator:
         def clear():
             Num_Input.config(text='')
         #create a function for each operation
+        def get_operation(op):
+            global frst_num, operator
+
+            frst_num = int(Num_Input['text'])
+            operator = op
+            Num_Input.config(text='')
         # Perform operation within the = button
     #create a space where the calculation takes place or the screen of a calculator
         Num_Input = Label(root, text='', bg='black', fg='white')
