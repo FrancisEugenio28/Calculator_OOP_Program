@@ -16,13 +16,6 @@ frst_num= scnd_num= operator= None
 
 class GUI_calculator:
     def GUI(self):
-        #create a function for each operation
-        def get_operation(op):
-            global frst_num, operator
-
-            frst_num = int(Num_Input['text'])
-            operator = op
-            Num_Input.config(text='')
         # Perform operation within the = button
         def get_answer():
             try: 
