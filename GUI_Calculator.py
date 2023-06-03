@@ -16,14 +16,6 @@ frst_num= scnd_num= operator= None
 
 class GUI_calculator:
     def GUI(self):
-        #create function for each number button
-        def get_digit(digit):
-            current = Num_Input['text']
-            new = current + str(digit)
-            Num_Input.config(text=new)
-        #create a function for the clear button
-        def clear():
-            Num_Input.config(text='')
         #create a function for each operation
         def get_operation(op):
             global frst_num, operator
