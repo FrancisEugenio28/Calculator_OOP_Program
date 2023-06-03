@@ -116,11 +116,11 @@ class GUI_calculator:
         button0.grid(row=4, column=1)
         button0.config(font=('verdana', 14, 'bold'))
         #create a functioning button for =
-        button_equal = Button(root, text='=', bg='white', fg='grey', width=5, height=2)
+        button_equal = Button(root, text='=', bg='white', fg='grey', width=5, height=2, command=lambda :get_answer())
         button_equal.grid(row=4, column=2)
         button_equal.config(font=('verdana', 14, 'bold'))
         #create a functioning button for /
-        button_divide = Button(root, text='/', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation('/'))
+        button_divide = Button(root, text='/', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation(/))
         button_divide.grid(row=4, column=3)
         button_divide.config(font=('verdana', 14, 'bold'))
         root.mainloop()
