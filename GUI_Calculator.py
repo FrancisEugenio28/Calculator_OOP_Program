@@ -15,7 +15,39 @@ root.configure(background='black')
 frst_num= scnd_num= operator= None
 
 class GUI_calculator:
-    def GUI(self, get_digit, get_operation, clear, get_answer):
+    def GUI():
+        def get_digit(digit):
+            current = Num_Input['text']
+            new = current + str(digit)
+            Num_Input.config(text=new)
+
+        def clear():
+            Num_Input.config(text='')
+
+        def get_operation(op):
+                global frst_num, operator
+
+                frst_num = int(Num_Input['text'])
+                operator = op
+                Num_Input.config(text='')
+
+        def get_answer():
+            global frst_num, scnd_num, operator
+                                
+            scnd_num = Num_Input['text']
+
+            if operator == '+':
+                Num_Input.config(text=int(float(frst_num) + float(scnd_num)))
+            elif operator == '-':
+                Num_Input.config(text=int(float(frst_num) - float(scnd_num)))
+            elif operator == '*':
+                Num_Input.config(text=int(float(frst_num) * float(scnd_num)))
+            else:
+                if scnd_num == 0:
+                    Num_Input.config(text='Syntax Error')
+                else:
+                    Num_Input.config(text=str(round(float(frst_num) / float(scnd_num), 2)))
+
     #create a space where the calculation takes place or the screen of a calculator
         Num_Input = Label(root, text='', bg='black', fg='white')
         Num_Input.grid(row=0, column=0, pady=(50,25), columnspan=5, sticky='w')
