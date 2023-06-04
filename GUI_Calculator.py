@@ -15,31 +15,7 @@ root.configure(background='black')
 frst_num= scnd_num= operator= None
 
 class GUI_calculator:
-    def GUI(self):
-        # Perform operation within the = button
-        def get_answer():
-            try: 
-                global frst_num, scnd_num, operator
-                        
-                scnd_num = Num_Input['text']
-
-                if operator == '+':
-                    Num_Input.config(text=int(float(frst_num) + float(scnd_num)))
-                elif operator == '-':
-                    Num_Input.config(text=int(float(frst_num) - float(scnd_num)))
-                elif operator == '*':
-                    Num_Input.config(text=int(float(frst_num) * float(scnd_num)))
-                else:
-                    if scnd_num == 0:
-                        Num_Input.config(text='Syntax Error')
-                    else:
-                        Num_Input.config(text=str(round(float(frst_num) / float(scnd_num), 2)))
-
-            finally: 
-                print("Ending the Program...")
-                import time
-                time.sleep (1)
-                print("Thank you for using my simple calculator Program")
+    def GUI(self, get_digit, get_operation, clear, get_answer):
     #create a space where the calculation takes place or the screen of a calculator
         Num_Input = Label(root, text='', bg='black', fg='white')
         Num_Input.grid(row=0, column=0, pady=(50,25), columnspan=5, sticky='w')
@@ -105,7 +81,7 @@ class GUI_calculator:
         button_equal.grid(row=4, column=2)
         button_equal.config(font=('verdana', 14, 'bold'))
         #create a functioning button for /
-        button_divide = Button(root, text='/', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation(/))
+        button_divide = Button(root, text='/', bg='white', fg='grey', width=5, height=2, command=lambda :get_operation('/'))
         button_divide.grid(row=4, column=3)
         button_divide.config(font=('verdana', 14, 'bold'))
         root.mainloop()
